@@ -1,6 +1,8 @@
 # Unity Point Cloud Converter
 
 A Unity Editor tool for importing point-cloud files, previewing them in the Editor, exporting them as FBX, and saving them as reusable prefabs.
+<img width="959" height="523" alt="image" src="https://github.com/user-attachments/assets/63933588-66ea-433f-9f4c-e2b2d48c897a" />
+
 
 ## Features
 
