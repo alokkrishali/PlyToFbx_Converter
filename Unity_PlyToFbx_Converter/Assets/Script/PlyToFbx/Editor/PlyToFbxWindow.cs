@@ -14,11 +14,11 @@ namespace PlyToFbx.Editor
         private string status = "Choose a PLY or PCD point-cloud file.";
         private Mesh mesh;
 
-        [MenuItem("Tools/3D Tools/PLY to FBX Converter")]
+        [MenuItem("Tools/3D Tools/PLY-PCD Converter")]
         public static void ShowWindow()
         {
             PlyToFbxWindow window = GetWindow<PlyToFbxWindow>();
-            window.titleContent = new GUIContent("PLY Converter");
+            window.titleContent = new GUIContent("PLY/PCD Converter");
             window.minSize = new Vector2(360, 240);
         }
 
@@ -27,7 +27,7 @@ namespace PlyToFbx.Editor
             EditorGUILayout.LabelField("Point Cloud Converter", EditorStyles.boldLabel);
             EditorGUILayout.Space(6);
             EditorGUILayout.BeginHorizontal();
-            sourcePath = EditorGUILayout.TextField("PLY File", sourcePath);
+            sourcePath = EditorGUILayout.TextField("Point Cloud File", sourcePath);
             if (GUILayout.Button("Browse", GUILayout.Width(72)))
                 BrowseForPly();
             EditorGUILayout.EndHorizontal();
@@ -129,7 +129,7 @@ namespace PlyToFbx.Editor
         private void SavePrefab()
         {
             string defaultName = Path.GetFileNameWithoutExtension(sourcePath);
-            string prefabPath = EditorUtility.SaveFilePanelInProject("Save PLY Prefab", defaultName, "prefab", "Choose a project folder for the prefab.");
+            string prefabPath = EditorUtility.SaveFilePanelInProject("Save Point Cloud Prefab", defaultName, "prefab", "Choose a project folder for the prefab.");
             if (string.IsNullOrEmpty(prefabPath))
                 return;
 

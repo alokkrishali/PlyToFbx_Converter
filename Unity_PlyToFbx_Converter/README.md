@@ -1,6 +1,6 @@
-# Unity Point Cloud Converter
+# PLY/PCD Converter (.ply/.pcd file to .fbx)
 
-A Unity Editor tool for importing point-cloud files, previewing them in the Editor, exporting them as FBX, and saving them as reusable prefabs.
+A Unity Editor tool for importing PLY and PCD point-cloud files, previewing them in the Editor, exporting them as FBX, and saving them as reusable prefabs.
 
 ## Features
 
@@ -26,7 +26,7 @@ A Unity Editor tool for importing point-cloud files, previewing them in the Edit
 
 2. Open the project folder `Unity_PlyToFbx_Converter` in Unity Hub.
 3. Wait for Unity Package Manager to resolve project dependencies.
-4. In the Unity Editor, open **Tools > 3D Tools > PLY to FBX Converter**.
+4. In the Unity Editor, open **Tools > 3D Tools > PLY-PCD Converter**.
 5. Browse to a `.ply` or `.pcd` file, or enter its full path, then select **Load Point Cloud**.
 6. Use **View Mesh**, **Convert to FBX**, or **Save as Prefab**.
 

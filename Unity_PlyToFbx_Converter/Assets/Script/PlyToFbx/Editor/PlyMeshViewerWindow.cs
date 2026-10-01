@@ -12,12 +12,12 @@ namespace PlyToFbx.Editor
 
         public static void Open(Mesh mesh, string meshLabel)
         {
-            PlyMeshViewerWindow window = GetWindow<PlyMeshViewerWindow>(true, "PLY Viewer", true);
+            PlyMeshViewerWindow window = GetWindow<PlyMeshViewerWindow>(true, "Mesh Viewer", true);
             if (window.mesh != null)
                 DestroyImmediate(window.mesh);
             window.mesh = Instantiate(mesh);
             window.meshLabel = meshLabel;
-            window.titleContent = new GUIContent("PLY Viewer");
+            window.titleContent = new GUIContent("Mesh Viewer");
             window.Show();
         }
 
@@ -45,7 +45,7 @@ namespace PlyToFbx.Editor
         {
             if (mesh == null)
             {
-                EditorGUILayout.HelpBox("Load a PLY mesh in the converter window to preview it.", MessageType.Info);
+                EditorGUILayout.HelpBox("Load a point cloud or mesh in the converter window to preview it.", MessageType.Info);
                 return;
             }
 
